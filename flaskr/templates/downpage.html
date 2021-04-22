@@ -1,0 +1,51 @@
+<!-- {#<!doctype html>#} -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- JS Scripts -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.slim.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Peiran Zhang, Xueren Ge, Weide Shang, Yuwei Jiang">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+    <title>Phishing Website Detector Chrome Extension</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="header mx-auto my-4">
+            <h1 class="text-warning">Phishing Website Detetor Chrome Extension</h1>
+            <h6 class="text-info">Xueren Ge  Weide Shang  Peiran Zhang  Yuwei Jiang</h6>
+        </div>
+
+
+    </div>
+
+    <div class="container" id="mycontainer">
+        <h3> Step 1: Download Extension: </h3>
+        <a href="./phishingDetectorChromeExtension.zip" class="link">Download Extension</a>
+
+        <h3 class="mt-4"> Step 2: Load Extension into your Chromium browser: </h3>
+        <p>Go to <code>chrome://extensions</code>, activate developer mode, click on <code>Load Unpacked</code> and select the <code>Extension</code> folder of this project.</p>
+
+    </div>
+
+
+
+
+   
+</body>
+
+</html>

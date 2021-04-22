@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- JS Scripts -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.slim.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+    <title>Phishing Website Detector</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="header mx-auto my-4">
+            <h1 class="text-warning">Phishing Website Defense</h1>
+            <h6 class="text-info">Xueren Ge  Weide Shang  Peiran Zhang  Yuwei Jiang</h6>
+        </div>
+        <div class="container">
+        <form method="post" action="/nonce/" class="myForm mx-auto">
+            <!-- action="/check/" -->
+         <!-- csrf_token  -->
+         {{ form.csrf_token }}
+        
+            <div class="form-group mx-auto">
+                <input type="text" class="form-control mx-auto" id="exampleFormControlInput1" name="url" placeholder="Enter URL">
+                <button class="btn btn-warning my-4 mx-auto" type="submit">Check</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    {% for  message in get_flashed_messages(with_categories=True) %} 
+    <!-- with_categories=True -->
+    <div class="alert mb-0 mx-auto alert-{{message[0]}} alert-dismissible fade show" role="alert">
+        <strong>Message: </strong>{{ message[1] }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    <div class="container">
+        <a href="../download/" class="link">Chrome Extension</a>
+    </div>
+
+
+
+
+   
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+myvenv/ 
+_pycache_/ 
+flaskr/_pycache_/ 
+*.sqlite3
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+# My configurations:
+db.ini
+deploy_key_rsa
+# In Online Flask example
+instance/
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+*.swp
+*~

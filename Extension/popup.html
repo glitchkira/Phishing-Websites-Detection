@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="jquery.min.js"></script>
+    <script src="popup.js" type="text/javascript"></script>
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Peiran Zhang, Xueren Ge, Weide Shang, Yuwei Jiang">
+</head>
+<body>
+
+    <div id="title"><h2> Is it a phishing webpage? </h2></div>
+    <div id="webUrl"></div>
+    <div id="mainText"></div>
+    <p>Find Out Now...<br><sup>&darr;</sup></p>
+
+    <div id="myButton">
+        <center><button id="brick"><span>Check</span></button></center>
+        <div id="loaderDiv"><center> <div class="loader"></div></center> </div>
+        
+    </div>
+        
+    <div id='message'>
+        <div id="phishingAlert">
+            <!-- <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>  -->
+            <span class="closebtn" id="clsBtn1">&times;</span> 
+            <strong>Danger!</strong> It is a phishing website
+        </div>
+        <div id="safeAlert">
+            <span class="closebtn" id="clsBtn2">&times;</span> 
+            <strong>Safe!</strong> It is a legitimate website.
+        </div>
+        <div id="warningAlert">
+            <span class="closebtn" id="clsBtn3">&times;</span> 
+            <strong>Warning!</strong> There was Some Error in Prediction.
+        </div>
+    </div>
+</body>
+</html>
