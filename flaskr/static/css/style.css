@@ -37,6 +37,12 @@ body {
 /* .alert-dismissible{
     width: 40rem;
 } */
+.messageContainer{
+    width: 65%;
+    /*top right bottom left*/
+    align-items: center;
+    text-align:left;
+}
 #mycontainer{
     background-color: rgba(236, 236, 236, 0.9);
     width: 100%;

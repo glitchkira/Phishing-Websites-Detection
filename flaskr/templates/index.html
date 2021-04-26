@@ -17,14 +17,14 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 
-    <title>Phishing Website Detector</title>
+    <title>Phishing Website Check</title>
 </head>
 
 <body>
     
     <div class="container">
         <div class="header mx-auto my-4">
-            <h1 class="text-warning">Phishing Website Defense</h1>
+            <h1 class="text-warning">Phishing Website Check</h1>
             <h6 class="text-info">Xueren Ge  Weide Shang  Peiran Zhang  Yuwei Jiang</h6>
         </div>
         <div class="container">
@@ -40,15 +40,17 @@
         </form>
         </div>
     </div>
-    {% for  message in get_flashed_messages(with_categories=True) %} 
-    <!-- with_categories=True -->
-    <div class="alert mb-0 mx-auto alert-{{message[0]}} alert-dismissible fade show" role="alert">
-        <strong>Message: </strong>{{ message[1] }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+    <div class='messageContainer mx-auto'>
+        {% for  message in get_flashed_messages(with_categories=True) %} 
+        <!-- with_categories=True -->
+        <div class="alert mb-0 mx-auto alert-{{message[0]}} alert-dismissible fade show" role="alert">
+            <strong>Message: </strong>{{ message[1] }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     </div>
-    {% endfor %}
+        {% endfor %}
     <div class="container">
         <a href="../download/" class="link">Chrome Extension</a>
     </div>
