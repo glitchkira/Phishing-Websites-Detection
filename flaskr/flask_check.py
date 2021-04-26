@@ -10,6 +10,7 @@ def checkWithSql(url):
     """ Check the user input url with sql
     """
     urlInSql = 0
+    judge = 0
     time_start= time.time()
     # return 0 # overlook this func
     phishTank = PhishTank()
@@ -20,9 +21,11 @@ def checkWithSql(url):
         if result.valid:
             print("{url} is a phish!".format(url=result.url))
             # flash("Phishing Website: \n" + url, 'danger')
+            judge = 1
         else:
             print("{url} is not a phish!".format(url=result.url))
             # flash("Legitimate Website: \n" + url, 'success')
+            judge = 0
     else:
         # url Not exists in SQL
         urlInSql = 0
@@ -31,7 +34,7 @@ def checkWithSql(url):
     time_c = time_end - time_start 
     print('time cost for sql', time_c, 's')
 
-    return urlInSql
+    return urlInSql, judge
 
 def check(url):
     ''' Make prediction with trained model
@@ -44,7 +47,7 @@ def check(url):
     print("url to predict is:" + url)
     # Check with sql first
     try:
-        urlInSql = checkWithSql(url)
+        urlInSql, judge = checkWithSql(url)
     except Exception as error:
         print("Sql failed: %s" % error)
 
